@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainCta from "../components/MainCta.astro";
+---
+
+<Layout title="About">
+
+    <div class="contact-page">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <h1>Contact Us</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eaque error eius ex cupiditate modi, a, 
+                        temporibus natus quod, dolor laudantium quo consectetur soluta maiores ut? Natus distinctio illum facilis.</p>
+                </div>
+               <div class="contact-form">
+                
+                <div class="contact-names">
+                        <label for="name">Name:</label>
+                        <input type="text" placeholder="Name" id="name">
+                        <label for="surname">Surname:</label>
+                        <input type="text" placeholder="Surname" id="surname">
+                        <label for="email">Email:</label>
+                        <input type="text" name="Email" id="Email" placeholder="youremail@email.com">
+                        <label for="subject">What can we help you with:</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        <button>Submit</button>
+                </div>
+                
+               </div>
+
+            </div>
+        </div>
+    </div>
+
+    <MainCta />
+
+</Layout>
+
+
+<style>
+
+    body {
+        background-color: var(--secondary);
+    }
+
+    .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 5rem;
+   }
+
+.contact-text{
+    width: 600px;
+    margin: 150px 0px;
+}
+.contact-text h1 {
+    margin: 10px 0px;
+    font-size:3.1rem;
+}
+.contact-text p{
+    font-size: 1.2rem;
+}
+
+
+
+.contact-names {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: black;
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    margin: 50px 15px;
+    font-weight: bold;
+}
+
+.contact-names input , textarea{
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin:5px 0px;
+}
+
+
+
+.contact-names button {
+    padding: 10px 0px;
+    margin: 10px 0px;
+    transition: 250ms all ease;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    transition: 250ms all ease;
+}
+
+
+@media only screen and (max-width:900px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text {
+        width: 90%;
+        text-align: center;
+    }
+ }
+
+</style>

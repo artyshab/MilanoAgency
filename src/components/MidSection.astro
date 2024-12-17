@@ -1,0 +1,165 @@
+---
+import DataImage from '../assets/data-image.svg'
+import OptimizationImage from '../assets/optimization-image.svg'
+import FunctionImage from '../assets/function-image.svg'
+---
+
+<div class="mid-section">
+    
+  <div class="text">
+    <p id="first">Explore strategies to boost productivity</p>
+    <p id="second">A single software solution that combines task tracking, customer support, <br>
+        and workflow management, adored by both your team and customers</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+        <img src={DataImage.src} alt="Data-Image">
+        <p class="card-p">Data Analysis</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Nulla deleniti, et earum illo corrupti odio veniam tempore consectetur enim consequatur.</p>
+        <button>Discover More</button>     
+    </div>
+    <div class="card">
+        <img src={OptimizationImage.src} alt="Optimization-Image">
+        <p class="card-p">Optimization</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus laborum illum labore, 
+            vero quibusdam omnis quia quam error. Aperiam, maxime.</p>
+        <button>Discover More</button>
+    </div>
+    <div class="card">
+        <img src={FunctionImage.src} alt="Function-Image">
+        <p class="card-p">Functions</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ut quas, vel amet quos non assumenda repellat optio illo! Nulla.</p>
+        <button>Discover More</button>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+  
+  .mid-section{
+    background-color: white;
+    height: 900px;
+    text-align: center;
+  }
+
+  .text{
+    padding: 100px;
+  }
+
+  #first{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  #second{
+    font-size: 1.3rem;
+    font-weight:300;
+    padding-top: 10px;
+  }
+
+  img {
+    width: 80px;
+    height: auto;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 250ms all ease;
+    background-color: var(--lightsecondary);
+  }
+
+  .card:hover{
+    opacity: 0.9;
+    transition: 250ms all ease;
+  }
+   
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 5px 20px;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+   
+  .card-p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 10px 0px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 15px 0px;
+  }
+
+  @media only screen and (max-width:700px) {
+    .mid-section{
+      height: 1400px;
+    }
+
+    .text{
+    padding: 80px;
+  }
+
+  #first{
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  #second{
+    font-size: 1.1rem;
+    font-weight:300;
+    padding-top: 10px;
+  }
+    
+    .cards{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card {
+      max-width: 400px;
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+      margin-top: 20px ;
+  } 
+    img {
+      width: 70px;
+      height: auto;
+  }
+    .card-p {
+      font-size: 1.3rem;
+    }
+
+     p {
+      font-size: 1rem;
+     }
+
+     button {
+      font-size: 1rem;
+     }
+
+  }
+
+</style>

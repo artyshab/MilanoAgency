@@ -1,0 +1,78 @@
+---
+import '../stylecss/global.css'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+interface Props {
+	title: string;
+}
+
+
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type= "image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />  {/*Important to write this line after a section */}
+        <Footer />
+
+		<script type="module">
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+		  
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+			  apiKey: "AIzaSyAZcdADW7J-MIBrjkK-pBrx5uIb6MMAoB4",
+			  authDomain: "practice-52520.firebaseapp.com",
+			  projectId: "practice-52520",
+			  storageBucket: "practice-52520.appspot.com",
+			  messagingSenderId: "804923957274",
+			  appId: "1:804923957274:web:154dc5a2a2ac6c5cbff1a3",
+			  measurementId: "G-3J9VJTQSBL"
+			};
+		  
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const analytics = getAnalytics(app);
+		  </script>
+
+	</body>
+</html>
+
+
+
+<style is:global>
+	   
+	html {
+		font-family: system-ui, sans-serif;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
+

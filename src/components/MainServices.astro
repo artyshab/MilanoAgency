@@ -1,0 +1,163 @@
+---
+import DigitalImage from '../assets/services-images/digital-service.svg'
+import InternetImage from '../assets/services-images/globe-services.svg'
+import InteriorImage from '../assets/services-images/interior-service.svg'
+import IdeaImage from '../assets/services-images/idea-service.svg'
+import PhotographyImage from '../assets/services-images/photography-service.svg'
+import SupportImage from '../assets/services-images/support-service.svg'
+---
+
+
+
+
+<div class="services-wrapper">
+    
+    <div class="heading">
+        <p id="first-heading">OUR SERVICES</p>
+        <p id="second-heading"> World Best IT-Services We Provide</p>
+    </div>
+     
+        <div class="services">
+           <div class="row">
+            <div class="card">
+                <img src={DigitalImage.src} alt="">
+                <h1>Digital Services</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+            <div class="card">
+                <img src={IdeaImage.src} alt="">
+                <h1>Creative Ideas</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+            <div class="card">
+                <img src={PhotographyImage.src} alt="">
+                <h1>Photography</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src={InteriorImage.src} alt="">
+                <h1>Interior Design</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+            <div class="card">
+                <img src={InternetImage.src} alt="">
+                <h1>Online Services</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+            <div class="card">
+                <img src={SupportImage.src} alt="">
+                <h1>Unlimited Support</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident suscipit voluptas,
+                     fuga omnis, quas aliquam excepturi sunt architecto dolorum blanditiis sit? Odit sit architecto blanditiis.</p>
+                     <button>→ Learn More</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<style>
+    
+   
+     
+     .heading-services p {
+          font-size: 2rem;
+     }
+
+     .heading {
+        text-align: center;
+        font-size: 2.1rem;
+        font-weight: 600;
+        padding-top: 1.3rem;
+     }
+
+    .services-wrapper{
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+        background-color: white;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #76885B;
+    }
+     
+    .services{
+       margin: 0 auto;
+       padding: 50px;
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .card {
+        text-align: center;
+        padding: 30px;
+        border: 2px solid black;
+        margin: 20px;
+        background-color: var(--white);
+    }
+
+    img {
+        width: 50px;
+    }
+
+    #first-heading {
+        font-size: 1.4rem;
+        opacity: 0.8;
+        font-weight: 700;
+    }
+    #second-heading {
+       font-size: 2.5rem;
+       font-weight: 800;
+    }
+
+    button {
+        background-color: var(--accentColor);
+        color: black;
+        font-weight:700;
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: none;
+        margin: 15px 0;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 250ms all ease;
+    }
+
+    button:hover{
+        transform: scale(1.1);
+    }
+
+
+    @media only screen and (max-width:900px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+    }
+
+
+</style>

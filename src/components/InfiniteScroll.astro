@@ -1,0 +1,81 @@
+---
+import Image1 from '../assets/logo-images/image1.svg'
+import Image2 from '../assets/logo-images/image2.svg'
+import Image3 from '../assets/logo-images/image3.svg'
+import Image4 from '../assets/logo-images/image4.svg'
+import Image5 from '../assets/logo-images/image5.svg'
+import Image6 from '../assets/logo-images/image6.svg'
+import Image7 from '../assets/logo-images/image7.svg'
+import Image8 from '../assets/logo-images/image8.svg'
+import Image9 from '../assets/logo-images/image9.svg'
+import Image10 from '../assets/logo-images/image10.svg'
+---
+
+<h1>Trusted by enterprise companies</h1>
+
+<div class="logos">
+    <div class="logos-slide">
+        <img src={Image2.src} alt="Logo2">
+        <img src={Image3.src} alt="Logo3">
+        <img src={Image4.src} alt="Logo4">
+        <img src={Image5.src} alt="Logo5">
+        <img src={Image6.src} alt="Logo6">
+        <img src={Image7.src} alt="Logo7">
+        <img src={Image8.src} alt="Logo8">
+        <img src={Image9.src} alt="Logo9">
+        <img src={Image10.src} alt="Logo10">
+    </div>
+    <div class="logos-slide">
+        <img src={Image2.src} alt="Logo2">
+        <img src={Image3.src} alt="Logo3">
+        <img src={Image4.src} alt="Logo4">
+        <img src={Image5.src} alt="Logo5">
+        <img src={Image6.src} alt="Logo6">
+        <img src={Image7.src} alt="Logo7">
+        <img src={Image8.src} alt="Logo8">
+        <img src={Image9.src} alt="Logo9">
+        <img src={Image10.src} alt="Logo10">
+    </div>
+</div>
+
+
+<style>
+    
+     @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to { 
+      transform: translateX(-100%);
+    }
+  }
+
+
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    background-color: var(--white);
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: slide 18s infinite linear; /* Apply the animation */
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+  }
+
+  h1{
+    background-color: white;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 2.3rem;
+  }
+</style>

@@ -1,0 +1,111 @@
+---
+import Logo from '../assets/Milano-white.svg'
+---
+
+<div class="footer">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="left">
+                <img src={Logo.src} alt="Logo">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border"></div>
+        <div class="copyright">
+            <p>MilanoAgency@2024</p>
+            <p>Terms&Conditions</p>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<style>
+    .footer {
+        background-color: black;
+        padding: 50px;
+        width: 100%;
+    }
+
+    .footer-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img {
+        width: 250px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    ul li {
+        color: white;
+        list-style: none;
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .border{
+        border: 2px solid white;
+        margin: 20px auto;
+        opacity: 0.2;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .copyright p{
+        font-weight:200;
+        font-size: 1.1rem;
+        color: white;
+        opacity: 0.8;
+    }
+
+
+    @media only screen and (max-width:600px){
+        .footer {
+            padding: 50px 30px;
+        }
+       
+        .footer-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            max-width: ;
+        }
+
+        .left {
+            padding:10px 0 ;
+            text-align: center;
+        }
+        .right {
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        ul li {
+            font-size: 1.3rem;
+            padding: 0 4px;
+        }
+
+        .copyright p{
+            font-size: 1rem;
+        }
+    }
+    
+</style>

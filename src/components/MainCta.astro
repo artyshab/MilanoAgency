@@ -1,0 +1,78 @@
+<div class="main-cta">
+
+<div class="container">
+
+<div class="main-cta-wrapper">
+    
+    <div class="text">
+    <h1>Boost Your Productivity</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda totam similique cupiditate nesciunt vel expedita!</p>
+    </div>
+    
+    <div class="button">
+        <button>Get Started</button>
+    </div>
+</div>
+
+</div>
+</div>
+
+<style>
+    
+    .main-cta-wrapper {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+
+    }
+
+    .main-cta {
+
+        background-color: white;
+        padding: 40px;
+    }
+
+    button {
+        background-color: var(--accentColor);
+        border: none;
+        padding: 10px 25px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 350ms all ease;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        transition: 350ms all ease;
+    }
+
+   @media only screen and (max-width:600px) {
+         .main-cta-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .text h1 {
+            font-size: 1.9rem;
+            padding: 10px 0;
+         }
+         .text p {
+            text-align: center;
+         }
+
+         .button {
+            padding-top: 20px;
+         }
+
+         button {
+            font-size: 1.2rem;
+         }
+   }
+
+</style>

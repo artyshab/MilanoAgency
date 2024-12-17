@@ -1,0 +1,332 @@
+---
+
+---
+
+<div class="plans-wrapper">
+  
+  <div class="plans">
+    <div>
+      <h1>Plans & Pricing</h1>
+    </div>
+    <div class="monthly">
+      <h3>Monthly</h3>
+      <button><span></span></button>
+      <h3>Yearly</h3>
+    </div>
+  </div>
+
+  <div class="container">
+
+  <div class="cards">
+    <div class="card">
+      <div class="content">
+        <h1 class="card-heading">Starter</h1>
+        <p>Ideal for freelancers and contractors just starting out.</p>
+        <h1 class="price"></h1>
+        <div class="border-cards"></div>
+        <ul>
+          <li>All Templates</li>
+          <li>Unlimited Clients & Projects</li>
+          <li>Invoicing & Payments</li>
+          <li>Proposals & Contracts</li>
+          <li>Tasks & Time Tracking</li>
+          <li>Client CRM</li>
+          <li>Expense Tracking</li>
+          <li>Up to 5 Project Collaborators</li>
+        </ul>
+        <button>Start Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <h1 class="card-heading">Professional</h1>
+        <p>Everything a growing independent business needs to thrive.</p>
+        <h1 class="price"></h1>
+        <div class="border-cards"></div>
+        <ul>
+          <li>Everything in Starter plus...</li>
+          <li>Custom Branding</li>
+          <li>Forms & Questionnaires</li>
+          <li>Workflow Automations</li>
+          <li>Client Portal</li>
+          <li>QuickBooks Integration</li>
+          <li>Calendly Integration</li>
+          <li>Zapier Integration</li>
+          <li>Up to 15 Project Collaborators</li>
+        </ul>
+        <button>Start Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <h1 class="card-heading">Business</h1>
+        <p>The perfect package for small businesses and agencies.</p>
+        <h1 class="price"></h1>
+        <div class="border-cards"></div>
+        <ul>
+          <li>Everything in Starter and <br /> Professional plus...</li>
+          <li>Subcontractor Management</li>
+          <li>Hiring Agreement Templates (1099 contracts)</li>
+          <li>Subcontractor Onboarding</li>
+          <li>Talent Pool</li>
+          <li>3 Team Seats (additional seats $9/month)</li>
+          <li>Accountant Access</li>
+          <li>Connect Multiple Bank Accounts</li>
+          <li>Unlimited Subcontractors</li>
+          <li>Unlimited Project Collaborators</li>
+        </ul>
+        <button>Start Now</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="h1-header">
+    <h1>Super charge your works with add-ons</h1>
+  </div>
+
+  <div class="addons-wrapper">
+    <div class="addon">
+      <div class="text">
+        <h2>Collaborator</h2>
+        <p>
+          Invite other users to specific projects for limited access and
+          functionality.
+        </p>
+      </div>
+      <div class="addon-price">
+        <h2>Free</h2>
+      </div>
+    </div>
+
+    <div class="addon">
+      <div class="text">
+        <h2>Partner</h2>
+        <p>
+          Invite other users for full account access and company management.
+        </p>
+      </div>
+      <div class="addon-price">
+        <h2>$9/month</h2>
+      </div>
+    </div>
+
+    <div class="addon">
+      <div class="text">
+        <h2>Associate</h2>
+        <p>
+          Track expenses, identify write-offs, and estimate quarterly taxes
+          easily.
+        </p>
+      </div>
+      <div class="addon-price">
+        <h2>$10/month</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+
+  .plans-wrapper {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .plans {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin: 30px auto;
+  }
+
+  .plans .monthly {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .plans button {
+    border: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: var(--accentColor);
+    position: relative;
+  }
+
+  .plans button span {
+    background-color: white;
+    border-radius: 50%;
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 200ms ease;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px auto;
+    padding: 10px;
+  }
+   
+  .card-heading , .price{
+    text-align: center;
+  }
+
+  .card ul {
+    height: 60vh;
+  }
+
+  .cards li {
+    list-style-type:disc;
+    padding: 5px 0px;
+    font-size: 1rem;
+  }
+
+  .cards button {
+    background-color: var(--accentColor);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+
+  .card button:hover {
+        transform: scale(1.1);
+        transition: 350ms all ease;
+  }
+
+  .cards p{
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .border-cards {
+    border: var(--accentColor) solid 1px;
+  }
+
+  .card {
+    background-color: white;
+    margin: 0 20px;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 10px;
+  }
+
+  .content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .h1-header {
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .addon {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+
+  .span--move {
+    left: 50% !important;
+    transition: all 200ms ease;
+  }
+
+   
+  
+  @media only screen and (max-width:900px) {
+      .cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .plans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        margin: 15px;
+      }
+      .h1-header {
+        font-size: 0.9rem;
+        text-align: center;
+        width: 90%;
+      }
+
+      .addon {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+      .text{
+        margin-bottom: 25px;
+      }
+  }
+
+</style>
+
+
+<script>
+
+let butoni = document.querySelector(".monthly button");
+let spani = butoni.querySelector("span");
+let prices = document.querySelectorAll(".price");
+
+let monthlyPrices = [
+  { time: "Monthly", price: "24" },
+  { time: "Monthly", price: "50" },
+  { time: "Monthly", price: "90" }
+];
+
+let yearlyPrices = [
+  { time: "Yearly", price: "10" },
+  { time: "Yearly", price: "30" },
+  { time: "Yearly", price: "40" }
+];
+let currentPrices = spani.classList.contains("yearly") ? yearlyPrices : monthlyPrices;
+
+prices.forEach((item, index) => {
+  item.textContent = `${currentPrices[index].price}$`;
+});
+butoni.addEventListener("click", (ev) => {
+  spani.classList.toggle("span--move");
+  spani.classList.toggle("yearly");
+  let currentPrices = spani.classList.contains("yearly") ? yearlyPrices : monthlyPrices;
+
+  prices.forEach((item, index) => {
+    item.textContent = `${currentPrices[index].price}$`;
+  });
+});
+
+</script>

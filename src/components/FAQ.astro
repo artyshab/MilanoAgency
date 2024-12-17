@@ -1,0 +1,147 @@
+---
+import ButtonImage1 from "astro/assets/logo-images/bx-plus.svg"
+---
+
+<div class="faq-website">  
+       
+ <div class="faqs">
+
+    <div class="heading">
+        <h1>FAQs</h1>
+    </div>
+    <div class="text-button">
+       <div class="faqs-text">
+        <h2>What is Milano Agency, and how will it help me?</h2>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Eius quos fuga expedita omnis alias tenetur corporis labore qui harum accusamus!</p>
+      </div>
+    <div class="button">
+        <button onclick="myFunction(this)"></button>
+    </div>
+    </div>
+    <div class="border"></div>
+    <div class="text-button">
+    <div class="faqs-text">
+       <h2>Is Milano Agency free?</h2>
+       <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Eius quos fuga expedita omnis alias tenetur corporis labore qui harum accusamus!</p>
+ </div>
+ <div class="button">
+       <button onclick="myFunction(this)"></button>
+ </div>
+</div>
+     <div class="border"></div>
+
+<div class="text-button">
+<div class="faqs-text">
+ <h2>Can i use Milano Agency projects on my portfolio?</h2>
+ <p class="paragraph"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eius quos fuga expedita omnis alias tenetur corporis labore qui harum accusamus!</p>
+</div>
+<div class="button">
+ <button onclick="myFunction(this)"></button>
+</div>
+</div>
+<div class="border"></div>
+
+<div class="text-button">
+<div class="faqs-text">
+ <h2>How can I get help if i'm stuck in a challenge?</h2>
+ <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eius quos fuga expedita omnis alias tenetur corporis labore qui harum accusamus!</p>
+</div>
+<div class="button">
+ <button onclick="myFunction(this)"></button>
+</div>
+</div>
+
+</div>
+    
+</div>   
+
+
+<style>
+
+       .faq-website{
+        padding-top: 80px;
+        padding-bottom: 80px;
+       }
+    
+       .faqs{
+        background-color: white;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+       }
+
+       .text-button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       button {
+        padding: 15px 15px;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 5px 5px;
+        background-image: url({ButtonImage1.src});
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        background-color: var(--accentColor);
+       }
+
+       h2{
+        padding-top: 25px;
+       }       
+       
+       .paragraph {
+        display: none;
+        font-size: 1.3rem;
+       }
+
+       @media only screen and (max-width:600px) {
+        .faqs{
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+          text-align: center;
+        }
+        h2{
+            font-size: 1.4rem;
+            padding: 10px;
+        }
+
+        .paragraph {
+            font-size: 1rem;
+        }
+        
+       }
+
+</style>
+
+
+<script is:inline>
+
+
+function myFunction(button) {
+    var paragraph = button.parentElement.previousElementSibling.querySelector(".paragraph");
+
+    if (paragraph.style.display === "none" || paragraph.style.display === "") {
+        paragraph.style.display = "block";
+    } else {
+        paragraph.style.display = "none";
+    }
+}
+
+</script>

@@ -1,0 +1,132 @@
+---
+import Image from "../assets/person-image.svg";
+---
+<h1>Testimonials</h1>
+<div class="testimonial-wrapper">
+    <div class="testimonial">
+        <div class="card">
+            <img src={Image.src} alt="PersonImage">
+            <p id="top"><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate quidem unde deleniti dolorum ipsa corrupti accusantium magnam cupiditate eveniet totam!<span>"</span></p>
+            <p>First Person</p>    
+        </div>
+        <div class="card">
+            <img src={Image.src} alt="PersonImage">
+            <p id="top"><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate quidem unde deleniti dolorum ipsa corrupti accusantium magnam cupiditate eveniet totam!<span>"</span></p>
+            <p>Second Person</p>    
+        </div>
+        <div class="card">
+            <img src={Image.src} alt="PersonImage">
+            <p id="top"><span>"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Voluptate quidem unde deleniti dolorum ipsa corrupti accusantium magnam cupiditate eveniet totam!<span>"</span></p>
+            <p>Third Person</p>    
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    h1 {
+        padding: 20px;
+        text-align: center;
+        font-size: 2.8rem;
+        color: var(--white);
+        font-weight: 500;
+    }
+
+    .testimonial-wrapper{
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px;
+    }
+    
+    .testimonial{
+       width: 90%;
+       height: auto;
+       margin: 0 auto;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+       padding: 20px;
+    }
+
+    .card {
+        position: relative;
+        background-color: var(--navbuttons);
+        margin: 10px;
+        padding: 50px;
+        border-radius: 40px;
+        transition: 250ms all ease;
+    }
+
+    .card:hover{
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    img {
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: auto;
+        border: 10px solid black;
+        border-radius: 50%;
+    }
+    
+    #top {
+        font-size: 1.3rem;
+        padding-bottom: 20px;
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    span {
+        color: var(--accentColor);
+        font-size: 1.6rem;
+        font-style: italic;
+    }
+
+    p{
+        font-size: 1.3rem;
+        font-weight: 600;
+
+    }
+   
+     
+    @media only screen and (max-width:800px) {
+    .testimonial{
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+       padding: 20px;
+    }
+
+    .card {
+        position: relative;
+        background-color: var(--navbuttons);
+        width: 400px;
+        height: 300px;
+        margin-top: 80px;
+        padding: 30px;
+        border-radius: 40px;
+        transition: 250ms all ease;
+    }
+
+    .testimonial-wrapper{
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 50px;
+    }
+    
+    #top , p {
+        font-size: 1.2rem;
+    }
+   
+    }
+  
+</style>

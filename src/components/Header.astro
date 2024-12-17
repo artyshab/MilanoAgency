@@ -1,0 +1,556 @@
+---
+import '../stylecss/global.css'
+import Logo from '../assets/Milano-black.svg'
+import ImageBtn from "../assets/hamburger-button.svg"
+import CloseBtn from '../assets/close-button-image.svg'
+
+---
+
+
+
+
+    <div class="header-wrapper">
+        <div class="header-logo">
+        <a href=""><img src={Logo.src}></a> 
+        </div>
+        <nav class="header-nav">
+            <div class="header-links">
+                <ul>
+                    <li><a href="home">Home</a>
+                        <ul class="links-dropdown">
+                          <div class="first-link-row">
+                            <li>Drop1</li>
+                            <li>Drop2</li>
+                            </div>
+                          <div class="second-link-row">
+                            <li>Drop3</li>
+                            <li>Drop4</li>
+                          </div>
+                        </ul>
+                    </li>
+                    <li>About
+                        <ul class="links-dropdown">
+                            <div class="first-link-row">
+                              <li>Drop1</li>
+                              <li>Drop2</li>
+                              </div>
+                            <div class="second-link-row">
+                              <li>Drop3</li>
+                              <li>Drop4</li>
+                            </div>
+                          </ul>
+                    </li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="pricing">Pricing</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hamburger-button">
+            <img src={ImageBtn.src} alt="Button">
+        </div>
+        <div class="header-cta">
+            <button class="login-btn">Login</button></a>
+            <button class="sign-up cta-effect">Sign Up</button>
+        </div>
+    </div>
+
+     <div class="navigation-show">
+        <nav class="header-nav">
+            <div class="header-links-show">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li><a href="services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="pricing">Pricing</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header-cta" >
+            <button >Login</button>
+            <button class="sign-up cta-effect">Sign Up</button>
+        </div>
+     </div>
+
+
+     <div class="login-show">
+    <img src={CloseBtn.src} alt="Close-btn" class="close-btn">
+       <div class="login-wrapper">
+        <h1>Login</h1>
+        <form class="login-form">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username-login" name="username-login"><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd-login" name="pwd"><br><br>
+            <input type="submit" value="Submit" id="submit-button=pwd">
+          </form>
+        </div> 
+     </div>
+      
+
+     <div class="signup-show">
+        <img src={CloseBtn.src} alt="Close-btn" class="close-btn">
+           <div class="signup-wrapper">
+            <h1>Sign Up</h1>
+            <form class="signup-form">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd"><br><br>
+                <input type="submit" value="Submit" id="submit-button">
+              </form>
+            </div> 
+         </div>
+
+
+
+<style>
+
+
+     .body-modal {
+        overflow: hidden;
+     }
+
+    .login-show {
+        position: fixed;
+        z-index: 999;
+        left: 35%;
+        top: 200px;
+        background-color: var(--white);
+        padding: 50px;
+        width: 500px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.75);
+        visibility: hidden;
+    }
+
+    .signup-show {
+        position: fixed;
+        z-index: 999;
+        left: 35%;
+        top: 200px;
+        background-color: var(--white);
+        padding: 50px;
+        width: 500px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.75);
+        visibility: hidden;
+    }
+
+    .login-wrapper {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .login-wrapper h1 {
+        text-align: center;
+    }
+    
+    .login-show img {
+        width: 50px;
+        position: absolute;
+        right:10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    .signup-show img {
+        width: 50px;
+        position: absolute;
+        right:10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    #submit-button {
+        background-color: var(--accentColor);
+        border: none;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight:500;
+        cursor: pointer;
+        color: white;
+    }
+
+    input {
+        padding: 5px 25px;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    
+    .login-wrapper h1 {
+        padding: 10px;
+    }
+
+    .login-visible {
+        visibility: visible;
+    }
+
+    /****************************************************** */
+
+    .translated-up {
+      transform: translateY(-100%);
+    }
+
+    .header-wrapper{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color: var(--navigation);
+        transition: 350ms all ease ;
+        z-index: 10000;
+        transform: translateY(1);
+    }
+
+    .navigation-show{
+        position: fixed;
+        width: 100%;
+        padding: 20px;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: var(--navigation);
+        transition: 350ms all ease ;
+        transform: translateY(10);
+        z-index:2 ;
+    }
+
+
+    .navigation-show.active {
+    transform: translateY(100px);
+    visibility: visible;
+    opacity: 1;
+}
+
+    .header-links-show ul li {
+    list-style: none;
+    display: inline;
+    font-size: 1.3rem;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+    .header-links ul li {
+    list-style: none;
+    display: inline;
+    font-size: 1.3rem;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+a {
+    color: inherit; /* Use the same color as the normal text */
+    text-decoration: none; /* Remove underline if desired */
+}
+
+    .hamburger-button img {
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+       
+    }
+
+.header-logo img {
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    padding: 5px 15px;
+    border: none;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+ .sign-up {
+     
+    background-color: var(--accentColor);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Hide the dropdown by default */
+.links-dropdown {
+    left: -15px;
+    visibility: hidden;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    z-index: 1; /* Ensure dropdown is above other content */
+    display: flex !important;
+    border-radius: 15px;
+    opacity: 0; 
+    padding: 5px;
+    width: 450px;
+    height: 50vh;
+    top: 50px;
+}
+
+.header-links li {
+     position: relative;
+}
+
+/* Show dropdown when hovering over the parent li */
+.header-links li:hover .links-dropdown {
+    
+    visibility: visible;
+    transition: 350ms all ease;
+    opacity: 1;
+}
+
+
+.first-link-row li{
+     border:2px solid black;
+     border-radius: 20px;
+     padding: 40px 60px;
+    
+}
+.second-link-row li{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 40px 60px;
+}
+
+ul.links-dropdown::after {
+    position: absolute;
+    left: 25px; /* Adjust position as needed */
+    top: -13px; /* Position above the dropdown */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px; /* Adjust size and shape of the arrow */
+    border-color: var(--accentColor) transparent transparent transparent; /* Red arrow pointing upwards */
+    content: "";
+    z-index: 2; /* Ensure arrow is above dropdown content */
+    pointer-events: none; /* Make sure the arrow does not interfere with hover events */
+    transition: opacity 0.3s ease; /* Optional: Add transition for smooth appearance */
+    transform: rotate(180deg);
+}
+
+ul.menu li:hover .links-dropdown::after {
+    opacity: 1; /* Show arrow on hover */
+}
+
+
+@media only screen and (max-width:900px) {
+    .header-links ul li {
+        display: none;
+    }
+
+    img{
+        width: 200px;
+    }
+
+    .header-logo img {
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    }
+    .header-links-show ul li {
+    list-style: none;
+    display: inline;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    cursor: pointer;
+    }
+     
+    .header-cta {
+        display:none;
+    }
+
+    .login-show {
+            width: 400px !important;
+            left: 50%; /* Center the image horizontally */
+            top: 200px; /* Adjust vertical position as needed */
+            transform: translateX(-50%);
+            
+        }
+
+    .signup-show {
+            width: 400px !important;
+            left: 50%; /* Center the image horizontally */
+            top: 200px; /* Adjust vertical position as needed */
+            transform: translateX(-50%);
+    }    
+
+ 
+}
+
+@media only screen and (min-width:900px) {
+    .hamburger-button {
+        display: none;
+    }
+    .navigation-show {
+        display: none;
+    }
+    
+
+}
+
+
+</style>
+
+
+<script>
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+    
+const firebaseConfig = {
+  apiKey: "AIzaSyA838iWPNIEoyBwibeYlJaW28mh4FYpe38",
+  authDomain: "practicefirebase-c4a80.firebaseapp.com",
+  projectId: "practicefirebase-c4a80",
+  storageBucket: "practicefirebase-c4a80.appspot.com",
+  messagingSenderId: "1094583392485",
+  appId: "1:1094583392485:web:7c6b9346f54243150a5c0c",
+  measurementId: "G-RTS4LPS2ZN"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth(app); // Assuming `app` is your initialized Firebase app instance
+
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('email') as HTMLInputElement;
+    const usernameInput = document.getElementById('username') as HTMLInputElement;
+    const passwordInput = document.getElementById('pwd') as HTMLInputElement;
+    const signupForm = document.getElementById('signup-form') as HTMLFormElement;
+
+    if (signupForm && emailInput && usernameInput && passwordInput) {
+        signupForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = emailInput.value;
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            try {
+                // Create user with email and password
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+                console.log('User signed up:', user);
+
+                // Clear form fields after successful sign-up
+                signupForm.reset();
+            } catch (error) {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.error('Error signing up:', errorMessage);
+                // Handle sign-up errors and display appropriate messages to the user
+            }
+        });
+    } else {
+        console.error('One or more form elements are missing or not found.');
+    }
+});
+
+</script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.querySelector(".hamburger-button");
+    const dropdownMenu = document.querySelector(".navigation-show");
+
+    toggleBtn.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('active');
+    });
+});
+
+</script>
+
+
+<script>
+     let nav = document.querySelector(".header-wrapper");
+     let lastScroll = 0;
+
+document.addEventListener("scroll", (ev) => {
+  let scrollPosition = window.scrollY;
+  if (scrollPosition > lastScroll) {
+    nav.classList.add("translated-up");
+  } else {
+    nav.classList.remove("translated-up");
+  }
+  lastScroll = scrollPosition <= 0 ? 0 : scrollPosition;
+});
+</script>
+
+
+<script>
+      let nav = document.querySelector(".navigation-show");
+     let lastScroll = 0;
+
+document.addEventListener("scroll", (ev) => {
+  let scrollPosition = window.scrollY;
+  if (scrollPosition > lastScroll) {
+    nav.classList.add("translated-up");
+  } else {
+    nav.classList.remove("translated-up");
+  }
+  lastScroll = scrollPosition <= 0 ? 0 : scrollPosition;
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Login modal
+        const openLoginModal = document.querySelector(".login-btn");
+        const closeLoginModal = document.querySelector(".login-show .close-btn");
+        const loginModal = document.querySelector(".login-show");
+
+        openLoginModal.addEventListener('click', function() {
+            loginModal.classList.add('login-visible');
+            document.body.classList.add('body-modal');
+        });
+
+        closeLoginModal.addEventListener('click', function() {
+            loginModal.classList.remove('login-visible');
+            document.body.classList.remove('body-modal');
+        });
+
+        // Signup modal
+        const openSignupModal = document.querySelector(".sign-up");
+        const closeSignupModal = document.querySelector(".signup-show .close-btn");
+        const signupModal = document.querySelector(".signup-show");
+
+        openSignupModal.addEventListener('click', function() {
+            signupModal.classList.add('login-visible');
+            document.body.classList.add('body-modal');
+        });
+
+        closeSignupModal.addEventListener('click', function() {
+            signupModal.classList.remove('login-visible');
+            document.body.classList.remove('body-modal');
+        });
+    });
+</script>
+
