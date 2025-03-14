@@ -11,38 +11,14 @@ import CloseBtn from '../assets/close-button-image.svg'
 
     <div class="header-wrapper">
         <div class="header-logo">
-        <a href=""><img src={Logo.src}></a> 
+        <a href="/"><img src={Logo.src}></a> 
         </div>
         <nav class="header-nav">
             <div class="header-links">
                 <ul>
-                    <li><a href="home">Home</a>
-                        <ul class="links-dropdown">
-                          <div class="first-link-row">
-                            <li>Drop1</li>
-                            <li>Drop2</li>
-                            </div>
-                          <div class="second-link-row">
-                            <li>Drop3</li>
-                            <li>Drop4</li>
-                          </div>
-                        </ul>
-                    </li>
-                    <li>About
-                        <ul class="links-dropdown">
-                            <div class="first-link-row">
-                              <li>Drop1</li>
-                              <li>Drop2</li>
-                              </div>
-                            <div class="second-link-row">
-                              <li>Drop3</li>
-                              <li>Drop4</li>
-                            </div>
-                          </ul>
-                    </li>
-                    <li><a href="services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="pricing">Pricing</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
@@ -59,11 +35,9 @@ import CloseBtn from '../assets/close-button-image.svg'
         <nav class="header-nav">
             <div class="header-links-show">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li><a href="services">Services</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="pricing">Pricing</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
                 </ul>
             </div>
         </nav>
@@ -323,17 +297,7 @@ button {
 }
 
 
-.first-link-row li{
-     border:2px solid black;
-     border-radius: 20px;
-     padding: 40px 60px;
-    
-}
-.second-link-row li{
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 40px 60px;
-}
+
 
 ul.links-dropdown::after {
     position: absolute;
@@ -413,67 +377,6 @@ ul.menu li:hover .links-dropdown::after {
 
 
 </style>
-
-
-<script>
-
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-    
-const firebaseConfig = {
-  apiKey: "AIzaSyA838iWPNIEoyBwibeYlJaW28mh4FYpe38",
-  authDomain: "practicefirebase-c4a80.firebaseapp.com",
-  projectId: "practicefirebase-c4a80",
-  storageBucket: "practicefirebase-c4a80.appspot.com",
-  messagingSenderId: "1094583392485",
-  appId: "1:1094583392485:web:7c6b9346f54243150a5c0c",
-  measurementId: "G-RTS4LPS2ZN"
-};
-
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth(app); // Assuming `app` is your initialized Firebase app instance
-
-document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('email') as HTMLInputElement;
-    const usernameInput = document.getElementById('username') as HTMLInputElement;
-    const passwordInput = document.getElementById('pwd') as HTMLInputElement;
-    const signupForm = document.getElementById('signup-form') as HTMLFormElement;
-
-    if (signupForm && emailInput && usernameInput && passwordInput) {
-        signupForm.addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const email = emailInput.value;
-            const username = usernameInput.value;
-            const password = passwordInput.value;
-
-            try {
-                // Create user with email and password
-                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                const user = userCredential.user;
-                console.log('User signed up:', user);
-
-                // Clear form fields after successful sign-up
-                signupForm.reset();
-            } catch (error) {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.error('Error signing up:', errorMessage);
-                // Handle sign-up errors and display appropriate messages to the user
-            }
-        });
-    } else {
-        console.error('One or more form elements are missing or not found.');
-    }
-});
-
-</script>
-
 
 <script>
 
